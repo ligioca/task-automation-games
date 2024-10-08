@@ -1,0 +1,26 @@
+export const games = [
+    "Who Wants to Be a Millionaire?",
+    "Arkadium's Bubble Shooter",
+    "Family Feud",
+    "Arkadium Word Wipe Game",
+    "Solitaire Kitchen: Tripeaks Cooking Adventure",
+    "Spider Solitaire Game",
+    "Outspell Spelling Game",
+    "Crystal Collapse",
+    "Mahjongg Solitaire",
+    "Klondike Solitaire",
+    "The Price Is Right Plinko Pegs",
+    "Block Champ",
+    "Lumeno",
+    "8 Ball Pool",
+    "Mahjongg Dimensions Blue",
+    "Mahjongg Candy",
+    "Jewel Shuffle",
+    "Free Online Bridge",
+    "Freecell Solitaire",
+    "Card Sharks",
+    "Free Online Daily Crossword Puzzle",
+    "Crystal Collapse Odyssey",
+    "Crystal Collapse Summer Nights"
+  ];
+
