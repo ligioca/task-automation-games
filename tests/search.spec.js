@@ -5,6 +5,7 @@ const { LoginPage } = require("../pages/login.po")
 const { MainPage } = require("../pages/main.po")
 const { ignoreAds } = require("../helpers/ads-handler")
 const { SearchPage } = require("../pages/search.po")
+require('dotenv').config()
 
 test("Search - categories are in the search results", async ({ page })  => {
     const initialPage = new InitialPage(page)
@@ -23,7 +24,7 @@ test("Search - categories are in the search results", async ({ page })  => {
         await expect(loginPage.password).toBeVisible()
         await expect(loginPage.email).toBeVisible()
 
-        await loginPage.authenticate("testtaskuser@arkadium.com", "Test123123")
+        await loginPage.authenticate(process.env.LOGIN, process.env.PASSWORD)
 
         await expect(mainPage.mainMenu).toBeVisible()
         await expect(mainPage.arkadiumFanFavoritesPanel).toBeVisible()

@@ -6,6 +6,7 @@ const { MainPage } = require("../pages/main.po")
 const { ignoreAds } = require("../helpers/ads-handler")
 const { BestPage } = require("../pages/best.po")
 const { games } = require("../tests/constants/best-games-list")
+require('dotenv').config()
 
 
 test("Best - all the best games are in the list of games", async ({ page })  => {
@@ -25,7 +26,7 @@ test("Best - all the best games are in the list of games", async ({ page })  => 
         await expect(loginPage.password).toBeVisible()
         await expect(loginPage.email).toBeVisible()
 
-        await loginPage.authenticate("testtaskuser@arkadium.com", "Test123123")
+        await loginPage.authenticate(process.env.LOGIN, process.env.PASSWORD)
 
         await expect(mainPage.mainMenu).toBeVisible()
         await expect(mainPage.arkadiumFanFavoritesPanel).toBeVisible()
