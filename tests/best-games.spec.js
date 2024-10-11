@@ -3,19 +3,34 @@ const { test, expect } = require("@playwright/test")
 const { MainPage } = require("../pages/main.po")
 const { BestPage } = require("../pages/best.po")
 const { games } = require("../tests/constants/best-games-list")
-const { initialSetup } = require("../tests/hooks/initial-setup")
+const { initialSetup } = require("../helpers/hooks/initial-setup")
 require("dotenv").config()
+import * as allure from "allure-js-commons"
 
+test.beforeEach(async ({page}, testInfo ) => {
+	console.log ("### Starting test '" + testInfo.title + "'")
 
-test("All the best games are in the list of games", async ({ page })  => {
+	//The report information bellow are optional
+	await allure.feature("Best Games Section");
+	await allure.owner("AKD");
+	await allure.tags("task", "challenge");
+	await allure.severity("critical");
+
 	await initialSetup(page)
+})
 
+test.afterEach(async ({}, testInfo) => {
+	console.log ("### Status of the test: '" + testInfo.title + "' is: " + testInfo.status)
+}) 
+
+
+test("All the best games should be in the list of best games", async ({ page })  => {
 	const mainPage = new MainPage(page)
 	const best = new BestPage(page)
 
 	await test.step("User selects Best section", async () => {
 		await mainPage.bestGamesSection.click()
-		expect(best.categories).toBeVisible()
+		await expect(best.categories).toBeVisible()
 	})
 
 	await test.step("List of best games should be shown", async () => {
@@ -23,7 +38,7 @@ test("All the best games are in the list of games", async ({ page })  => {
 		for (const game of games) {
 			const gameLocator = page.locator(`img[alt="${game}"]`)
 			await gameLocator.scrollIntoViewIfNeeded()
-			expect(gameLocator).toBeVisible({ timeout: 5000 })
+			await expect(gameLocator).toBeVisible({ timeout: 5000 })
 		}
 	})
 

@@ -2,7 +2,7 @@ const { expect } = require("@playwright/test")
 const { InitialPage } = require("../../pages/initial.po")
 const { LoginPage } = require("../../pages/login.po")
 const { MainPage } = require("../../pages/main.po")
-const { ignoreAds } = require("../../helpers/ads-handler")
+const { ignoreAds } = require("../ads-handler")
 require("dotenv").config()
 
 async function initialSetup(page) {

@@ -8,7 +8,7 @@ exports.InitialPage = class InitialPage {
 	}  
 
 	async goto() {
-		await this.page.goto("https://www.arkadium.com/", {waitUntil:"load"})
+		await this.page.goto("/", {waitUntil:"load"})
 	}
 
 	async agreeCookies() {
