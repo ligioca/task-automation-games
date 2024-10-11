@@ -12,11 +12,11 @@ Automation for Games Platform
 - Install dependencies: `npm install`
 - The credentials and URL for the tests must be filled in the `.env` file. 
 
-- If it is the first time running the project, please run `npm run test`
+- If it is the first time running the project, please run `npx playwright install`
 
 # Without docker: 
-- All the tests localy: `npx playwright test`
-- Specific test localy: `npx playwright test [TEST_PATH]`
+- All the tests localy: `npm run test`
+- Specific test localy: `npm run test [TEST_PATH]`
 
 # With docker: 
 WIP
