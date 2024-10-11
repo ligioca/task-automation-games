@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Automation for Games Platform",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "lintfix": "eslint . --fix",
+    "test": "npx playwright test",
+    "test:docker": ""
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -11,7 +15,7 @@
     "@playwright/test": "^1.47.2",
     "@types/node": "^22.7.4",
     "allure-playwright": "^3.0.4",
-    "eslint": "^8.14.0"
+    "eslint": "^8.57.1"
   },
   "dependencies": {
     "dotenv": "^16.4.5"

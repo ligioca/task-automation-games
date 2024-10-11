@@ -4,7 +4,7 @@ exports.LoginPage = class LoginPage {
 		this.page = page
 		this.email = this.page.locator("input[id='email']")    
 		this.password = this.page.locator("input[id='password']")  
-        this.submitButton = this.page.locator("button[type='submit']")     
+		this.submitButton = this.page.locator("button[type='submit']")     
 	}  
 
 	async authenticate(email,password){
@@ -12,6 +12,6 @@ exports.LoginPage = class LoginPage {
 		await this.password.type(password)        
 		await this.submitButton.click()
 
-        await this.page.waitForNavigation()      
+		await this.page.waitForNavigation()      
 	}
 }

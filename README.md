@@ -10,8 +10,8 @@ Docker
 ## How to setup
 - Clone the project: **SCRIPT**
 - Install dependencies: `npm install`
-- If it is the first time running the project, run `npx playwright install`
 - The credentials for the tests must be filled in the `.env` file. 
+- If it is the first time running the project, run `npm run test`
 
 # No docker: 
 - In order to run localy (no docker) all the tests: `npx playwright test`
@@ -38,6 +38,11 @@ This project uses Allure for reporting.
 To check the report locally, run the following command after the test execution:
 
 `allure generate ./allure-results --clean && allure open ./allure-report`
+
+## Formatting:
+Use command `npm run lintfix` to get the formatting issues fixed.
+
+
 
 WIP: 
 UPDATE DOCKER
