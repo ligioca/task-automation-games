@@ -19,7 +19,7 @@ Automation for Games Platform
 - Specific test localy: `npm run test [TEST_PATH]`
 
 # With docker: 
-WIP
+//// TODO
 
 ## Tests
 This project covers the main flow of three Use Cases:
@@ -49,13 +49,12 @@ To check the report locally, run the following command after the test execution:
 
 `allure generate ./allure-results --clean && allure open ./allure-report`
 
+If there is a failed test, you can check the screeshot and video of the problem in the report.
+
+
+<img width="1430" alt="Screenshot 2024-10-12 at 02 15 08" src="https://github.com/user-attachments/assets/c6c7202e-33f7-4745-881a-7a3da267316f">
+
+
 ## Formatting:
 Use command `npm run lintfix` to get the formatting issues fixed.
-
-
-
-WIP: 
-UPDATE DOCKER
-ARE THE TESTS RUNNING OK ALL TOGETHER (add afterall)
-ADD IMAGE OF REPORTING AND MAKE IT BETTER
 
