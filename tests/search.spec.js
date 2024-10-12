@@ -36,7 +36,7 @@ test("Searching for category should bring the correct category result", async ({
 	await test.step("Search for category should return the corresponding category icon", async () => {
 		for (let categorie of categories) {
 			await searchPage.searchInput.type(categorie)
-			const categorieLocator = page.locator(`//div[contains(@class, "SearchResultList-listw")]//div//div//div//div[contains(@class, "Category")]//picture//img[@alt="${categorie}"]`)
+			const categorieLocator = page.locator(`//div[contains(@class, "SearchResultList-list")]//div//div//div//div[contains(@class, "Category")]//picture//img[@alt="${categorie}"]`)
 			await expect(categorieLocator).toBeVisible({ timeout: 5000 })
 
 			try {

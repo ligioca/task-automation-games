@@ -1,0 +1,13 @@
+version: '3'
+services:
+  playwright:
+    build:
+        context: .
+        dockerfile: Dockerfile
+    working_dir: /app
+    volumes:
+        - ./playwright-report:/playwright-report
+        - ./test-results:/test-results
+        - ./allure-report:/allure-report
+        - ./allure-results:/allure-results
+    command: npx playwright test
