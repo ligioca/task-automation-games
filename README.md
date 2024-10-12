@@ -14,11 +14,11 @@ Automation for Games Platform
 
 - If it is the first time running the project, please run `npx playwright install`
 
-# Without docker: 
+### Without docker: 
 - All the tests localy: `npm run test`
 - Specific test localy: `npm run test [TEST_PATH]`
 
-# With docker: 
+### With docker: 
 //// TODO
 
 ## Tests
