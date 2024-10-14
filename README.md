@@ -61,3 +61,11 @@ If there is a failed test, you can check the screeshot and video of the problem 
 ## Formatting:
 Use command `npm run lintfix` to get the formatting issues fixed.
 
+
+
+## Video of the tests running:
+
+https://github.com/user-attachments/assets/729cfa8a-caef-4b11-9f2c-260c1f70cada
+
+
+
