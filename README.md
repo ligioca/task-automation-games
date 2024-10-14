@@ -19,7 +19,9 @@ Automation for Games Platform
 - Specific test localy: `npm run test [TEST_PATH]`
 
 ### With docker: 
-//// TODO
+- Run: `npm run test:docker`
+
+**Note**: I was not able to have all the tests passed probably because of captcha (an investigation should be done). I was also not able to verify the allure report running on docker. 
 
 ## Tests
 This project covers the main flow of three Use Cases:
@@ -41,7 +43,8 @@ that the Gem prices shown at the shop are correct._**
 - Files: tests/shop-gems-prices.spec.js
 - Test Case: "Gems should have correct prices"
 
-The 3 specs are configured to run in parallel, with 3 different workers (3 instances of chromium). You can chang this configuration on `playwright.config.js`.
+The 3 specs are configured to run sequentially, but you can have them running in parallel with 3 different workers (3 instances of chromium) by chaging the `workers` on `playwright.config.js`. 
+In the same place, you can configure the `retries` of the tests that are set initially to 0. 
 
 ## Report
 This project uses Allure for reporting. 

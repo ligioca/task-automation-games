@@ -10,7 +10,7 @@ import * as allure from "allure-js-commons"
 test.beforeEach(async ({page}, testInfo ) => {
 	console.log ("### Starting test '" + testInfo.title + "'")
 
-	//The report information bellow are optional
+	//The information bellow is optional
 	await allure.feature("Shop Section");
 	await allure.owner("AKD");
 	await allure.tags("task", "challenge");

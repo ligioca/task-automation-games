@@ -6,7 +6,8 @@
   "scripts": {
     "lintfix": "eslint . --fix",
     "test": "npx playwright test",
-    "test:docker": ""
+    "test:docker": "./scripts/run-with-docker.sh",
+    "docker:run:test": "DEBUG=pw:api xvfb-run playwright test"
   },
   "keywords": [],
   "author": "",

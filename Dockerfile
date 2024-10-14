@@ -1,7 +1,7 @@
-FROM mcr.microsoft.com/playwright:v1.47.2-focal
-WORKDIR /app
+FROM --platform=linux/amd64 mcr.microsoft.com/playwright:focal
 COPY package.json ./
-RUN npm install
+COPY package-lock.json ./
+RUN npm ci
 RUN apt-get install xvfb
 COPY ./ ./
 RUN npx playwright install

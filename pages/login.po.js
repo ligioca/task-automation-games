@@ -12,6 +12,8 @@ exports.LoginPage = class LoginPage {
 		await this.password.type(password)        
 		await this.submitButton.click()
 
+		/** TODO: threat the captcha iframe to make the test flaky and retry it */
+
 		await this.page.waitForNavigation()      
 	}
 }
